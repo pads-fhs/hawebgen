@@ -1,0 +1,35 @@
+name:                StatiGen
+version:             1.0.0.0
+synopsis:            Builds a static website from templates and markdown files.
+-- description:         
+license:             GPL
+license-file:        LICENSE
+author:              David Hahn
+maintainer:          d.hahn_a@stud.fh-sm.de
+-- copyright:           
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.8
+
+data-files:          templates/emptyPage/index.conf
+                     templates/emptyPage/index.page
+					 templates/default/default.css
+                     templates/default/default.template
+					 templates/default/images/background.jpg
+                     templates/andreas00/default.css
+                     templates/andreas00/default.template
+					 templates/andreas00/images/bg.gif
+					 templates/andreas00/images/front.jpg
+					 templates/andreas00/images/menubg.gif
+					 templates/andreas00/images/menubg2.gif
+                     templates/andreas01/default.css
+                     templates/andreas01/default.template
+					 templates/andreas01/images/bg.gif
+					 templates/andreas01/images/front.jpg
+                     templates/andreas08/default.css
+                     templates/andreas08/default.template
+
+executable           StatiGen
+  main-is:           StatiGen.hs     
+  other-modules:     StatiGen.Build, StatiGen.Config, StatiGen.Types, StatiGen.Util  
+  build-depends:     base ==4.5.*, directory, filepath, MissingH, ConfigFile, pandoc
