@@ -12,4 +12,4 @@ StatiGen kann mit den folgenden Befehlen installiert werden:
 	
 	`runhaskell Setup build`
 	
-	`runhaskell Setuo install`
+	`runhaskell Setup install`
